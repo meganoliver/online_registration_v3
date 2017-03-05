@@ -1,8 +1,17 @@
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 form,
 div {
   background-color: #f4f7f8;
   margin: 0 auto;
   width: 100%;
+}
+
+form {
+  border-top: solid 1px black;
+  padding-bottom: 20px;
 }
 
 header div {
@@ -26,8 +35,11 @@ h2 {
 
 .legend {
   padding: 15px;
-  border-top: solid 1px black;
   width: 100%;
+}
+
+.border {
+    border-bottom: solid 1px black;
 }
 
 header,
@@ -52,19 +64,23 @@ fieldset {
 }
 
 legend {
-  padding: 10px 0 10px 0;
+  padding: 0 10px 0;
   border-top: 5px black;
-  text-align: center;
-  text-decoration: underline;
   font-size: 1.5em;
+  margin-left: 0;
 }
 
 label {
   padding-top: 8px;
 }
 
+input:focus {
+  background-color: lightyellow;
+}
+
 .select {
   padding-left: 0;
+  font-size: 1.5em;
 }
 
 .radio,
@@ -81,12 +97,17 @@ label {
 .input,
 select {
   display: block;
-  padding: 5px, 10px, 5px, 5px;
+  padding: 5px;
   border-radius: 5px;
   box-shadow: -3px 0 0 -3px;
   margin-bottom: 10px;
   width: 100%;
   height: 20px;
+}
+
+.input,
+#placeholder {
+  text-align: right;
 }
 
 #topics {
@@ -99,7 +120,10 @@ select {
 }
 
 .button {
-  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 75%;
   background-color: #9a8;
   border-radius: 10px;
   height: 50px;
@@ -107,8 +131,23 @@ select {
   padding: 10px;
 }
 
+
+
+
 /*MEDIA QUERIES*/
 
 @media (min-width: 760px) {
-  
+  body {
+    margin: 0;
+    width: 100%;
+  }
+  .label,
+  .input,
+  select {
+    display: inline-block;
+    width: 75%;
+  }
+  .button {
+    width: 25%;
+  }
 }
